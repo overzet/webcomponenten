@@ -14,8 +14,6 @@ public class LogoutServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
 
         request.getSession().invalidate();
         System.out.println("You are successfully logged out!");
